@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "xxxxx"
-    key    = "xxxxx"
-    region = "us-east-1"
-    dynamodb_table = "xxxxx"
+    bucket         = "XXXXXXXX"
+    key            = "XXXXXXXX"
+    region         = "us-east-1"
+    dynamodb_table = "XXXXXXXX"
   }
 
 }
@@ -26,4 +26,5 @@ provider "aws" {
     external_id = var.assume_role.external_id
   }
 }
+
 
