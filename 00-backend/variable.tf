@@ -10,8 +10,8 @@ variable "assume_role" {
   })
 
   default = {
-    role_arn    = "xxxxxx"
-    external_id = "xxxxx"
+    role_arn    = "arn:aws:iam::308103291514:role/terraform-role"
+    external_id = "5ec18450-8cc7-4d07-b353-c84b549c84a2"
   }
 }
 
@@ -37,7 +37,7 @@ variable "remote_backend" {
   default = {
     bucket = "nssecgoo-terraform-state-files"
     state_locking = {
-      dynamodb_table_name          = "xxxxxxx"
+      dynamodb_table_name          = "nssecgoo-terraform-state-locking"
       dynamodb_table_billing_mode  = "PAY_PER_REQUEST"
       dynamodb_table_hash_key      = "LockID"
       dynamodb_table_hash_key_type = "S"
