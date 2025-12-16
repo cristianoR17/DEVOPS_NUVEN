@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "XXXXXXXX"
-    key            = "XXXXXXXX"
+    bucket         = "nssecgoo-terraform-state-files"
+    key            = "networking/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "XXXXXXXX"
+    dynamodb_table = "nssecgoo-terraform-state-locking"
   }
 
 }
