@@ -4,7 +4,7 @@ data "aws_iam_policy_document" "sqs_policy" {
 
     principals {
       type        = "AWS"
-      identifiers = ["308103291514"]
+      identifiers = ["XXXXXXXXXX"]
     } 
       principals{
       type        = "Service"
