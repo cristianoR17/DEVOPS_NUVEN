@@ -1,0 +1,7 @@
+# Diretórios locais do Terraform (onde os provedores são baixados)
+.terraform/
+
+# Arquivos de estado local e backups (o estado deve ser remoto)
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
