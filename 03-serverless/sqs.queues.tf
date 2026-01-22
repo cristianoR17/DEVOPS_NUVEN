@@ -2,13 +2,13 @@
 resource "aws_sqs_queue" "nsse" {
   count = length(var.queues)
 
-  name                      = var.queues[count.index].name  
+  name                      = var.queues[count.index].name
   delay_seconds             = var.queues[count.index].delay_seconds
   max_message_size          = var.queues[count.index].max_message_size
   message_retention_seconds = var.queues[count.index].message_retention_seconds
   receive_wait_time_seconds = var.queues[count.index].receive_wait_time_seconds
   sqs_managed_sse_enabled   = var.queues[count.index].sqs_managed_sse_enabled
-  policy                    = data.aws_iam_policy_document.sqs_policy.json  
+  policy                    = data.aws_iam_policy_document.sqs_policy.json
 
   tags = var.tags
 }

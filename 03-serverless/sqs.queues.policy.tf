@@ -4,14 +4,14 @@ data "aws_iam_policy_document" "sqs_policy" {
 
     principals {
       type        = "AWS"
-      identifiers = ["XXXXXXXXXX"]
-    } 
-      principals{
+      identifiers = ["308103291514"]
+    }
+    principals {
       type        = "Service"
       identifiers = ["sns.amazonaws.com"]
-      }
+    }
 
-    actions = ["sqs:*"]
+    actions   = ["sqs:*"]
     resources = ["*"]
   }
 }
